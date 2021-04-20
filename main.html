@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="./style/main.css">
+    <title>SrSlime</title>
+</head>
+<body>
+    <div class="grad1">
+        <div class="namepos">
+            <h1 class="text1"> SrSlime</h1>
+        </div>
+        <div class="textpos3">
+            <p class="text3">Welcome to my Website.</p>
+            <input class="btn" onclick="openMenu()" type="button" value="Start">
+        </div>
+    </div>
+
+
+
+    <div id="mineMenu" class="dropdown">
+            <a href="javascript: void(0)" class="buttonX" onclick="closeMenu()">&times;</a>
+   
+    <div class="dropdown-list">
+            <a href="main.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+    </div>
+    </div>
+
+    <span class="hamb" onclick="openMenu()">&#9776;</span>
+    <script src="./js/index.js"></script>
+</body>
+</html>
