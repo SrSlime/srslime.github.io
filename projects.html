@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="preconnect" href="https://fonts.gstatic.com"> -->
-    <link rel="stylesheet" href="./style/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="/style/main.css">
     <title>SrSlime - Projects</title>
 </head>
 <body> 
@@ -16,6 +16,18 @@
     <div class="aboutpos" style="left: 50.25%;">
       <h2 class="text2"> Projects</h2>
      </div>
+     <!-- Dropdown NEW -->
+    <div class="positionnewmenu" style="top: 21%;">
+        <div id="theNewMenuLine" class="line"></div>
+          <input id="newButtonMenu" class="textnewmenu" onclick="NewMenu()" type="button" value="v">
+        <div id="theNewMenu" class="newdropdown"> 
+          <div class="NewMenuContainer" style="top: 60%;">
+            <a id="newMenu1" href="/index">Home</a>
+            <a id="newMenu2" href="/projects">Projects</a>
+            <a id="newMenu3" href="/contact">Contact</a>
+        </div>
+        </div>
+      </div>
     <div class="textpos3">
        <p class="text3">Welcome to the project zone.</p>
     </div>
@@ -28,36 +40,30 @@
   <section id="galleryid" class="container">
     <div>
         <img src="./images/MintyPixelDimension512.png" alt="Pixel Dimension Image"/>
-        <span class="description1" style="color: black;">Pixel Dimension</span>
-        <span class="description2" style="color: black;">This project is on work in progress, but it's my favorite, i learned alot making him.</span> 
-        <span class="description3"><a href="https://srslime.github.io/myprojects/pixel-dimension" style="text-decoration: none; color: black;">Learn more</a></span> 
+        <span class="description1" style="color: #161b22;">Pixel Dimension</span>
+        <span class="description2" style="color: #161b22;">This project is on work in progress, but it's my favorite so far, I learned a lot making it.</span> 
+       <!--<span class="description3"><a href="https://srslime.github.io/myprojects/pixel-dimension" style="text-decoration: none; color: black;">Learn more</a></span> -->
+        <span class="description3"><input class="btngl" onclick="location.href='https://srslime.github.io/myprojects/pixel-dimension';" type="button" value="Learn More"></span>
     </div>
     <div>
-        <p class="text2">And more to come</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/Emojione_2754.svg" alt="DEMO Game Image"/>
+        <span class="description1" style="color: #161b22;">DEMO Project</span>
+        <span class="description2" style="color: #161b22;">I'm making a demo with my love, not revealed yet.</span>
+        <span class="description2" style="color: #161b22; top: 65%;"><strong> Engine: </strong> UNITY</span>
+        <span class="description3"><input class="btngl" onclick="location.href='https://youtu.be/dQw4w9WgXcQ';" type="button" style="background-color: gainsboro; border-color: gainsboro; color: white;" value="TBT"></span>  
+    </div>
+    <div>
+        <p class="textmoregl">And more to come...</p>
     </div>
     <div>
     </div>
     <div>
     </div>
 </section>
-
 </div>
-  
 
 
 
-
-    <div id="mineMenu" class="dropdown">
-            <a href="javascript: void(0)" class="buttonX" onclick="closeMenu()">&times;</a>
-   
-    <div class="dropdown-list">
-            <a href="https://srslime.github.io/main">Home</a>
-            <a href="https://srslime.github.io/projects">Projects</a>
-            <a href="https://srslime.github.io/contact">Contact</a>
-    </div>
-    </div>
-
-    <span class="hamb" onclick="openMenu()">&#9776;</span>
-    <script src="./js/index.js"></script>
+<script src="./js/index.js"></script>
 </body>
 </html>
