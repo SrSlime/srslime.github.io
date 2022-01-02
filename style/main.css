@@ -9,12 +9,16 @@
 html {
   background-color: #fff;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   background-color: #fff;
   overflow-x: hidden;
   min-width: 300px;
+  padding: 0;
+  margin: 0;
+  height: 100%;
 }
 
 a {
@@ -26,14 +30,12 @@ a {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  width: 100vw;
-  background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
-  background-blend-mode: multiply;
-  background-size: 100% 100%;
+  width: 101vw;
+  background-color: #323232 
 }
 
 .blanksection {
-  padding: 50%;
+  padding: 0;
   align-items: center;
   justify-content: center;
   height: 100% auto;
@@ -41,11 +43,6 @@ a {
   background: white;
 }
 
-.bgnongrad1 {
-  height: 100%;
-  width: 100%;
-  background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Flag_of_Cusco.svg/220px-Flag_of_Cusco.svg.png");
-}
 
 .bgproject {
   height: 100%;
@@ -77,9 +74,7 @@ a {
 }
 
 ::-webkit-scrollbar-track {
-  background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
-  background-blend-mode: multiply;
-  background-size: 100% 100%;
+  background-color: #323232
 }
 
 ::-webkit-scrollbar-thumb {
@@ -91,7 +86,24 @@ a {
   background: rgb(121, 121, 121); 
 }
 
+/* Contact Container */
+#ContactContainer {
+  display: flex;                  
+  flex-direction: row;            
+  flex-wrap: nowrap;              
+  justify-content: space-between; 
+  background-color: none;
+  column-gap: 40px;
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
+
+
+/* Sections */
 
 /* Gallery */
 .container {
@@ -105,7 +117,7 @@ a {
 .container > div > img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   user-select: none;
 }
 
@@ -153,11 +165,7 @@ a {
   color: white;
 }
 
-img {
-  border-radius: 12px;
-  padding: 5px;
-  pointer-events: none;
-}
+
 
 .description1 {
   display: none;
@@ -189,6 +197,74 @@ img {
   pointer-events: none;
 }
 
+/* Pixel Dimension SC */
+.pxdmsection { 
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  background-color: white;
+}
+
+.pxdmsection > img {
+  -webkit-user-drag: none;
+  user-select: none;
+  width: 250px;
+  height: 250px;
+  float: left;
+  font-family: 'Roboto', sans-serif;
+}
+
+.titletextpxsection {
+  font-family: 'Roboto', sans-serif;
+  font-size: 3em;
+  font-weight: 600;
+  color: #5c5c5c;
+  user-select: none;
+  position: absolute;
+  left: 50%;
+  top: 110%;
+  transform: translate(-50%, -50%);
+}
+
+.textpxsection {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3em;
+  font-weight: 400;
+  line-height: 155%;
+  color: #5c5c5c;
+  user-select: contain;
+  position: absolute;
+  left: 50%;
+  top: 125%;
+  transform: translate(-50%, -50%);
+}
+
+.textpxsection::selection {
+  color: black;
+  background-color: #5c5c5c;
+}
+
+.textpxsection::-moz-selection {
+  color: black;
+  background-color: #5c5c5c;
+}
+
+/* Bottom Info Section */
+.bottominfo {
+  position: absolute;
+
+  background-color: #323232 
+}
+.bottominfo > p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.85em;
+  font-weight: 600;
+  color: black;
+  user-select: none;
+}
+
+
 
 /* Text Style */
 .text0 {
@@ -206,19 +282,21 @@ img {
 .text1 {
   font-family: 'Segoe UI', sans-serif;
   font-size: 5em;
-  font-weight: lighter;
+  font-weight: normal;
   color: white;
   text-align: center;
   user-select: none;
+  z-index: 420;
 }
 
 .text2 {
   font-family: 'Segoe UI', sans-serif;
   font-size: 3em;
-  font-weight: 100;
-  color: gray;
+  font-weight: lighter;
+  color: #5c5c5c;
   text-align: center;
   user-select: none;
+  z-index: 69;
 }
 
 .text3 {
@@ -258,9 +336,19 @@ img {
   font-family: 'Segoe UI', sans-serif;
   font-size: 2em;
   font-weight: 100;
-  color:rgba(255, 255, 255, 0.5);
+  color:#5c5c5c;
   user-select: none;
 }
+
+.textmoregl {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 3em;
+  font-weight: 100;
+  color: #161b22;
+  text-align: center;
+  user-select: none;
+}
+
 
 /* Position */
 .namepos {
@@ -285,15 +373,22 @@ img {
   transform: translate(-50%, -50%);
 }
 
-.contactpos {
+.acontactpos {
   position: absolute;
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-
 .textpos3 {
+  width: 320px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.textposmain {
   width: 320px;
   position: absolute;
   top: 50%;
@@ -332,77 +427,199 @@ img {
 
 
 
-/* Dropdown & Hamb*/
-    .btn {
-       font-family: 'Roboto', sans-serif;
-       font-size: 1em;
-       font-weight: bold;
-       width: 100%;
-       border: 3px solid white;
-       background: none;
-       color: white;
-       padding: 5px;
-       cursor: pointer;
-       margin: 12px 0;
-       border-radius: 12px;
-       transition: 0.25s;
-  
-    }
+/* New Menu */
+.textnewmenu {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5em;
+  font-weight: normal;
+  color: white;
+  text-align: center;
+  width: 100%;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin: 3px 0;
+  transition: font-weight .05s;
+  transition: transform .15s linear;
+}
 
-    .btn:hover {
-      color: #1C1C1C;
-      background-color: white;
-    }
+.textnewmenu:hover {
+  font-weight: 600;
+}
 
-    .dsbtn {
-      font-family: 'Roboto', sans-serif;
-      font-size: 1em;
-      font-weight: bold;
-      width: 100%;
-      border: 3px solid #161b22;
-      background: #161b22;
-      background-image: url(https://discord.com/assets/1c8a54f25d101bdc607cec7228247a9a.svg);
-      background-repeat: no-repeat;
-      background-position: left; padding-left: 20px;
-      color: white;
-      padding: 2.5px;
-      display: inline;
-      cursor: pointer;
-      border-radius: 12px;
-      margin: 6px 0;
-      transition: 0.25s;
-    }
+.positionnewmenu {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-   .dsbtn:hover {
-      background-color: #0d1117;
-      border-color: #0d1117;
-    }
+.line {
+  width: 125px;
+  height: 50px;
+  border-bottom: 3px solid white;
+  transition: width .1s ease-in-out, height .05s linear;
+}
 
-    .ghbtn {
-      font-family: 'Roboto', sans-serif;
-      font-size: 1em;
-      font-weight: bold;
-      width: 100%;
-      border: 3px solid #161b22;
-      background: #161b22;
-      background-image: url(https://github.githubassets.com/images/modules/site/icons/footer/github-mark.svg);
-      background-repeat: no-repeat;
-      background-position: left; padding-left: 20px;
-      color: white;
-      padding: 2.5px;
-      cursor: pointer;
-      border-radius: 12px;
-      margin: 6px 0;
-      transition: 0.25s;
- 
-    }
+.newdropdown {
+  height: 10%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 5%;
+  left: 25%;
+  display: none;  
+  transition: .5s; 
+  opacity: 0%;
+} 
 
-    .ghbtn:hover {
-      background-color: #0d1117;
-      border-color: #0d1117;
-    }
-   
+.newdropdown a{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  padding: 8px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+  user-select: none;
+  transition: opacity .01s ease-in, color .25s ease;
+}
 
+.newdropdown a:hover {
+  color: #5c5c5c;
+}
+
+.NewMenuContainer {
+  display: flex;                  
+  flex-direction: row;                        
+  column-gap: 5px;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* Buttons */
+.btn {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  width: 25%;
+  border: 3px solid #161b22;
+  background: none;
+  color: #161b22;
+  padding: 5px;
+  cursor: pointer;
+  margin: 12px 0;
+  border-radius: 12px;
+  transition: 0.15s;
+
+}
+
+.btn:hover {
+ color: white;
+ background-color: #0d1117;
+ border-color: #0d1117;
+}
+
+
+.btnmain {
+ font-family: 'Roboto', sans-serif;
+ font-size: 1.5em;
+ font-weight: 300;
+ width: 100%;
+ border: none;
+ background: none;
+ color: white;
+ padding: 5px;
+ cursor: pointer;
+ margin: 12px 0;
+ border-radius: 12px;
+ transition: 0.25s;
+
+}
+
+.btnmain:hover {
+color: white;
+background-color: #1C1C1C;
+}
+
+
+.btngl {
+ font-family: 'Roboto', sans-serif;
+ font-size: 1em;
+ font-weight: bold;
+ width: 100%;
+ border: 3px solid #161b22;
+ background: #161b22;
+ color: gainsboro;
+ padding: 5px;
+ cursor: pointer;
+ margin: 12px 0;
+ border-radius: 12px;
+ transition: 0.25s;
+}
+
+.btngl:hover {
+color: white;
+background-color: #0d1117;
+border: 3px solid #0d1117;
+border-radius: 8px;
+}
+
+
+.dsbtn {
+ font-family: 'Roboto', sans-serif;
+ font-size: 1em;
+ font-weight: bold;
+ width: 110%;
+ border: 3px solid #161b22;
+ background: #161b22;
+ background-image: url(/images/Discord-Logo-White.svg);
+ background-repeat: no-repeat;
+ background-position: left; padding-left: 20px;
+ background-size: contain;
+ color: white;
+ padding: 3px;
+ display: inline;
+ cursor: pointer;
+ border-radius: 12px;
+ margin: 6px 0;
+ transition: 0.25s;
+}
+
+.dsbtn:hover {
+ background-color: #0d1117;
+ border-color: #0d1117;
+}
+
+
+.ghbtn {
+ font-family: 'Roboto', sans-serif;
+ font-size: 1em;
+ font-weight: bold;
+ width: 110%;
+ border: 3px solid #161b22;
+ background: #161b22;
+ background-image: url(https://github.githubassets.com/images/modules/site/icons/footer/github-mark.svg);
+ background-repeat: no-repeat;
+ background-position: left; padding-left: 20px;
+ background-size: contain;
+ color: white;
+ padding: 3px;
+ cursor: pointer;
+ border-radius: 12px;
+ margin: 6px 0;
+ transition: 0.25s;
+}
+
+.ghbtn:hover {
+ background-color: #0d1117;
+ border-color: #0d1117;
+}
+
+
+/* OLD Dropdown & Hamb*/
 .dropdown {
   height: 100%;
   width: 0%;

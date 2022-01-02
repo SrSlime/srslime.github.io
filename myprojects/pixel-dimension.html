@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="/style/main.css">
     <title>SrSlime - Pixel Dimension</title>
 </head>
@@ -15,53 +15,55 @@
     </div>
     <div class="aboutpos">
       <h2 class="text2"> Pixel Dimension</h2>
-     </div>
-     <div class="githubpos">
-        <input class="ghbtn" onclick="window.open('https://github.com/SrSlime/pixel-dimension')" type="button" value="     GitHub">
-     </div>
-     <div class="projectsquare">
-       <div class="textscroll">
-         <p class="text4"> &nbsp&nbsp (Yeah i need to write, problem?) &nbsp&nbspLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar aliquet rhoncus. In eu ex eu ante lobortis pellentesque. Ut venenatis leo libero, quis pulvinar est ornare ut. Vestibulum pretium ac dui sed faucibus. Mauris bibendum orci quam, eu eleifend nunc fringilla ac. Suspendisse potenti. Nullam at rhoncus dui. Donec maximus quam eget enim aliquet sodales. Etiam pretium elit sit amet odio iaculis dignissim. Cras vitae nulla maximus, auctor lacus ac, gravida sapien.
+    </div>
+<!-- Dropdown NEW -->
+    <div class="positionnewmenu" style="top: 22%;">
+      <div id="theNewMenuLine" class="line"></div>
+        <input id="newButtonMenu" class="textnewmenu" onclick="NewMenu()" type="button" value="v">
+      <div id="theNewMenu" class="newdropdown"> 
+        <div class="NewMenuContainer" style="top: 60%;">
+          <a id="newMenu1" href="/index">Home</a>
+          <a id="newMenu2" href="/projects">Projects</a>
+          <a id="newMenu3" href="/contact">Contact</a>
+      </div>
+      </div>
+    </div>
 
-          Vestibulum rhoncus, felis sit amet elementum auctor, nisi justo finibus dui, faucibus aliquet tortor metus in dui. Maecenas facilisis varius felis et gravida. Nullam congue turpis sit amet libero semper, ut convallis elit accumsan. Etiam rhoncus eget arcu condimentum tincidunt. Ut porttitor justo est, et lacinia orci pharetra non. Nam eget hendrerit turpis, eu imperdiet libero. Quisque aliquam porta velit ut posuere. In pretium tempor accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque orci nunc, posuere ornare tellus lacinia ut. Nulla non mauris at elit maximus accumsan semper sit amet felis. Morbi quis posuere orci. Quisque justo neque, auctor in metus gravida, tempor commodo est. Proin auctor laoreet porttitor.
-          
-          Praesent iaculis sollicitudin diam at aliquam. Nulla facilisi. Phasellus gravida ornare magna, at mattis lacus ultricies vel. Aliquam blandit odio eget elit tristique, sed tristique risus molestie. Nullam pulvinar urna ut lacus iaculis scelerisque. In laoreet ipsum eu interdum blandit. Donec et dolor libero. Integer dui velit, scelerisque non aliquet in, ullamcorper vel risus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum sagittis posuere mauris, et iaculis leo.
-          
-          Vivamus semper pharetra enim, at facilisis neque dapibus in. Aenean nec leo vel quam varius sollicitudin et et ligula. Pellentesque non felis semper, molestie ipsum vel, condimentum libero. Vestibulum ornare ipsum nec neque consequat, in porta odio sagittis. Integer eu leo eget libero ultrices gravida. Nulla eget ante diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla ut aliquam diam, eget varius urna. Morbi eleifend lacus vitae sodales pulvinar.
-          
-          Sed ut viverra enim, ac sagittis urna. Fusce eget aliquam est. Fusce efficitur nisi nec risus faucibus ullamcorper. Donec scelerisque placerat elementum. Quisque nec eros tincidunt, pulvinar ex eget, congue turpis. Etiam luctus ex felis, eu vehicula elit vehicula ac. Nam eget odio id velit sodales tempor in in urna. Suspendisse dapibus non nibh porta iaculis. Phasellus vitae hendrerit justo. Proin ultrices, diam porta sagittis condimentum, felis purus venenatis dolor, eget accumsan sapien lacus sed leo. Cras vel vulputate lacus. Aliquam sit amet orci vel lorem porta condimentum eget faucibus ante. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-          &nbsp&nbsp Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar aliquet rhoncus. In eu ex eu ante lobortis pellentesque. Ut venenatis leo libero, quis pulvinar est ornare ut. Vestibulum pretium ac dui sed faucibus. Mauris bibendum orci quam, eu eleifend nunc fringilla ac. Suspendisse potenti. Nullam at rhoncus dui. Donec maximus quam eget enim aliquet sodales. Etiam pretium elit sit amet odio iaculis dignissim. Cras vitae nulla maximus, auctor lacus ac, gravida sapien.
-
-          Vestibulum rhoncus, felis sit amet elementum auctor, nisi justo finibus dui, faucibus aliquet tortor metus in dui. Maecenas facilisis varius felis et gravida. Nullam congue turpis sit amet libero semper, ut convallis elit accumsan. Etiam rhoncus eget arcu condimentum tincidunt. Ut porttitor justo est, et lacinia orci pharetra non. Nam eget hendrerit turpis, eu imperdiet libero. Quisque aliquam porta velit ut posuere. In pretium tempor accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque orci nunc, posuere ornare tellus lacinia ut. Nulla non mauris at elit maximus accumsan semper sit amet felis. Morbi quis posuere orci. Quisque justo neque, auctor in metus gravida, tempor commodo est. Proin auctor laoreet porttitor.
-          
-          Praesent iaculis sollicitudin diam at aliquam. Nulla facilisi. Phasellus gravida ornare magna, at mattis lacus ultricies vel. Aliquam blandit odio eget elit tristique, sed tristique risus molestie. Nullam pulvinar urna ut lacus iaculis scelerisque. In laoreet ipsum eu interdum blandit. Donec et dolor libero. Integer dui velit, scelerisque non aliquet in, ullamcorper vel risus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum sagittis posuere mauris, et iaculis leo.
-          
-          Vivamus semper pharetra enim, at facilisis neque dapibus in. Aenean nec leo vel quam varius sollicitudin et et ligula. Pellentesque non felis semper, molestie ipsum vel, condimentum libero. Vestibulum ornare ipsum nec neque consequat, in porta odio sagittis. Integer eu leo eget libero ultrices gravida. Nulla eget ante diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla ut aliquam diam, eget varius urna. Morbi eleifend lacus vitae sodales pulvinar.
-          
-          Sed ut viverra enim, ac sagittis urna. Fusce eget aliquam est. Fusce efficitur nisi nec risus faucibus ullamcorper. Donec scelerisque placerat elementum. Quisque nec eros tincidunt, pulvinar ex eget, congue turpis. Etiam luctus ex felis, eu vehicula elit vehicula ac. Nam eget odio id velit sodales tempor in in urna. Suspendisse dapibus non nibh porta iaculis. Phasellus vitae hendrerit justo. Proin ultrices, diam porta sagittis condimentum, felis purus venenatis dolor, eget accumsan sapien lacus sed leo. Cras vel vulputate lacus. Aliquam sit amet orci vel lorem porta condimentum eget faucibus ante. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-          
-        </div>
-    </div>  
+    <div class="textpos3">
+      <p class="text3">Modification for the game <strong> Minecraft </strong></p>
+    </div>
   </div>
-
- 
-
+<div class="githubpos" style="top: 90%;">
+  <input class="ghbtn" onclick="window.open('https://github.com/SrSlime/pixel-dimension')" type="button" value="      GitHub">
 </div>
-  
+
+
+<div class="pxdmsection">
+  <img src="/images/MintyPixelDimension512.png" style="margin-left: 5%; margin-top: 10%;" alt="Icon Pixel Dimension Image"/>
+  <p class="titletextpxsection"> 
+    About
+  </p>
+  <p class="textpxsection"> 
+    &nbsp&nbsp The project consists of creating a modification for the <strong>Minecraft</strong> game, following the <strong>EULA</strong> rules, game modifications are very famous by the gamer community and companies also see this as a great opportunity to appear and grow their sales, a company that supports the community, is a company that will be famous forever among the gaming communities. &nbsp&nbsp
+  </p>
+  <img src="/images/MintyIngotPixelDimension512.png" style="margin-left: 165%; margin-top: 10%;" alt="Minty Ingot Image"/>
+  <p class="titletextpxsection" style="top: 145%;"> 
+    When
+  </p>
+  <p class="textpxsection" style="top: 160%; font-size: 1.4em; font-weight: 500; user-select: none;"> 
+    &nbsp&nbsp ??/??/20?? &nbsp&nbsp
+  </p>
+</div>
+
+<div class="blanksection" style="padding: 20%;"></div>
+
+
+<!-- <div class="bottominfo">
+  <p>SrSlime Portfolio</p>
+</div> -->
 
 
 
-    <div id="mineMenu" class="dropdown">
-            <a href="javascript: void(0)" class="buttonX" onclick="closeMenu()">&times;</a>
-   
-    <div class="dropdown-list">
-      <a href="https://srslime.github.io/main">Home</a>
-      <a href="https://srslime.github.io/projects">Projects</a>
-      <a href="https://srslime.github.io/contact">Contact</a>
-    </div>
-    </div>
-
-    <span class="hamb" onclick="openMenu()">&#9776;</span>
-    <script src="/js/index.js"></script>
+<script src="/js/index.js"></script>
 </body>
 </html>

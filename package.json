@@ -1,12 +1,12 @@
 {
-  "name": "sites",
-  "version": "1.0.0",
-  "description": "",
+  "name": "portfolio",
+  "version": "1.1.0",
+  "description": "My website made for be a portfolio.",
   "main": "index.js",
   "scripts": {
   },
   "author": "SrSlime",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {},
   "devDependencies": {
   }
